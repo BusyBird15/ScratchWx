@@ -33,7 +33,7 @@ def getData(location):  # called when client receives request
 @client.request
 def getAlerts(location):
     print("Alert request received")
-    response = requests.get("https://api.weatherapi.com/v1/forecast.json?key=b2e5fc3757534bd2aa1200512223011&q=" + location + "&days=3")
+    response = requests.get("https://api.weatherapi.com/v1/forecast.json?key=XXXXXXXXXX&q=" + location + "&days=3") # Replace "XXXXXXX" with your weatherapi.com token
     if response.status_code == 401:
         print("FATAL WARNING: API limit reached!")
         return ["FATAL ERROR: 400, API CALL LIMIT"]
